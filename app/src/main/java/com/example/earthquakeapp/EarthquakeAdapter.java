@@ -33,7 +33,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         TextView magnitudeTextView = (TextView) listItemView.findViewById(R.id.magnitude);
         // Get the Magnitude translation from the currentWord object and set this text on
         // the Magnitude TextView.
-        magnitudeTextView.setText(earthquake.getMagnitude());
+        magnitudeTextView.setText(String.valueOf(earthquake.getMagnitude()));
 
         // Find the TextView in the earthquake_list_item.xml layout with the ID location.
         TextView locationTextView = (TextView) listItemView.findViewById(R.id.location);
@@ -45,7 +45,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         TextView dateTextView = (TextView) listItemView.findViewById(R.id.date);
         // Get the Date translation from the currentWord object and set this text on
         // the Date TextView.
-        dateTextView.setText(earthquake.getDate());
+        dateTextView.setText(String.valueOf(earthquake.getDate()));
 
         return  listItemView;
     }

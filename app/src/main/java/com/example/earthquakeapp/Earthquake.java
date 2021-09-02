@@ -2,19 +2,19 @@ package com.example.earthquakeapp;
 
 public class Earthquake {
 
-    private String mMagnitude;
+    private double mMagnitude;
 
     private String mLocation;
 
-    private String mDate;
+    private Long mDate;
 
-    public Earthquake(String mMagnitude, String mLocation, String mDate) {
+    public Earthquake(double mMagnitude, String mLocation, Long mDate) {
         this.mMagnitude = mMagnitude;
         this.mLocation = mLocation;
         this.mDate = mDate;
     }
 
-    public String getMagnitude() {
+    public double getMagnitude() {
         return mMagnitude;
     }
 
@@ -22,7 +22,7 @@ public class Earthquake {
         return mLocation;
     }
 
-    public String getDate() {
+    public Long getDate() {
         return mDate;
     }
 }
