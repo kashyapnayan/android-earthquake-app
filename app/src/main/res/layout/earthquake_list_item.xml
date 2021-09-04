@@ -10,26 +10,64 @@
         android:id="@+id/magnitude"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:background="@drawable/magnitude_circle"
         android:textSize="16sp"
+        android:textColor="@android:color/white"
         android:text="8.5"/>
 
-    <TextView
-        android:id="@+id/location"
+    <LinearLayout
         android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:layout_marginLeft="16dp"
         android:layout_width="0dp"
-        android:layout_weight="4"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:text="San Francisco, CA"/>
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/location_offset"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textAllCaps="true"
+            android:textColor="@color/textColorEarthquakeDetails"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:text="San Francisco, CA"/>
 
-    <TextView
-        android:id="@+id/date"
+        <TextView
+            android:id="@+id/primary_location"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:textColor="@color/textColorEarthquakeLocation"
+            android:gravity="center"
+            android:text="San Francisco, CA"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_height="wrap_content"
+        android:layout_weight="3"
         android:layout_width="0dp"
-        android:layout_weight="4"
         android:gravity="end"
-        android:textSize="16sp"
-        android:text="Sep 12, 2021"/>
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/date"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/textColorEarthquakeDetails"
+            android:textSize="12sp"
+            android:text="Sep 12, 2021"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/textColorEarthquakeDetails"
+            android:textSize="16sp"
+            android:text="9:25 PM"/>
+    </LinearLayout>
 
 </LinearLayout>

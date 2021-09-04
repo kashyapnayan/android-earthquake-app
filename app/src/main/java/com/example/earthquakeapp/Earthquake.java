@@ -2,11 +2,11 @@ package com.example.earthquakeapp;
 
 public class Earthquake {
 
-    private double mMagnitude;
+    private final double mMagnitude;
 
-    private String mLocation;
+    private final String mLocation;
 
-    private Long mDate;
+    private final Long mDate;
 
     public Earthquake(double mMagnitude, String mLocation, Long mDate) {
         this.mMagnitude = mMagnitude;
